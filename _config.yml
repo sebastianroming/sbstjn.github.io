@@ -1,30 +1,42 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
 title: sbstjn.com
 email: hi@sbstjn.com
-description: Sebastian Müller from Hamburg, Germany.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://sbstjn.com" # the base hostname & protocol for your site
-twitter_username: sbstjn
-github_username:  sbstjn
+description: Software Engineer and Team Lead living in Hamburg, Germany. Daytime Flight Captain at Jimdo and passionated about Software, Design, People and vegan Food.
+baseurl: ""
+url: "https://sbstjn.com"
 repository: sbstjn/sbstjn.github.io
 
-# Build settings
-markdown: kramdown
+author:
+  twitter: sbstjn
 
-# Build settings
+twitter:
+  username: sbstjn
+
+facebook:
+  publisher: 669118929
+  admins: 669118929
+
 permalink: 'pretty'
-include: ['_pages', '.htaccess']
-exclude: ['Makefile', 'Gemfile', 'Gemfile.lock', 'node_modules', 'package.json', 'Gruntfile.js', 'README.md']
-gems: ['jekyll-sitemap']
 
-# Style settings
+include:
+  - _pages
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Makefile
+  - README.md
+  
+gems:
+  - jekyll-gist
+  - jekyll-mentions
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+gist:
+  noscript: true
+
 sass:
   sass_dir: 'assets/styles/_sass'
   style: 'compressed'

@@ -1,0 +1,23 @@
+.gist {
+  .gist-file {
+    border-bottom: 0px !important;
+    margin-bottom: $spacing-unit/2 !important;
+  }
+
+  .gist-data {
+    padding: 10px 0 10px 2px;
+  }
+
+  .gist-meta {
+    display: none;
+  }
+
+  .blob-num {
+    line-height: 20px !important;
+  }
+
+  .blob-code-inner {
+    font-size: 13px !important;
+    line-height: 20px !important;
+  }
+}
