@@ -19,6 +19,11 @@ $(document).ready(function() {
     $('.about-images li').css('transform', 'translateX(' + (-1 * 100 * next) + '%)');
   });
 
+  var mc = new Hammer($('.about-teaser')[0]);
+  mc.on("swipe", function(ev) {
+    $('.about-slider a[data-move="' + (ev.velocityX > 0 ? '-1' : '1') + '"]').click();
+  });
+
   $(document).bind('touchmove', function(e) {
      e.preventDefault();
   });
