@@ -1,6 +1,6 @@
 title: sbstjn.com
 email: hi@sbstjn.com
-description: Software Engineer and Team Lead living in Hamburg, Germany. Daytime Flight Captain at Jimdo and passionated about Software, Design, People and vegan Food.
+description: Software Engineer and Team Lead living in Hamburg, Germany. Daytime Flight Captain at Jimdo and passionate about Software, Design, People and vegan Food.
 baseurl: ""
 url: "https://sbstjn.com"
 repository: sbstjn/sbstjn.github.io
@@ -25,7 +25,7 @@ exclude:
   - Gemfile.lock
   - Makefile
   - README.md
-  
+
 gems:
   - jekyll-gist
   - jekyll-mentions
