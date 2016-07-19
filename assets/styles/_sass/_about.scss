@@ -1,5 +1,5 @@
 html body {
-  background-color: #262626;
+  background-color: #F9F9F9;
 }
 
 .about-teaser {
@@ -114,14 +114,7 @@ html body {
       padding: 0;
       margin: 0;
       font-size: 20px;
-
-      span {
-        padding-left: 10px;
-
-        a {
-          color: darken(white, 30%);
-        }
-      }
+      color: #E9E9E9;
     }
   }
 
@@ -199,8 +192,14 @@ html body {
 }
 
 .about-content {
-  background-color: white;
   position: absolute;
   top: 100%;
   width: 100%;
+  padding: 20px 20px 20px 20px;
+  margin: 0;
+  box-sizing: border-box;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
