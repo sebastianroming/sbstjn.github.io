@@ -23,8 +23,4 @@ $(document).ready(function() {
   mc.on("swipe", function(ev) {
     $('.about-slider a[data-move="' + (ev.velocityX > 0 ? '-1' : '1') + '"]').click();
   });
-
-  $(document).bind('touchmove', function(e) {
-     e.preventDefault();
-  });
 });
