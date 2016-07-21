@@ -1,0 +1,14 @@
+<footer>
+  <div class="wrapper">
+    {% for repo in site.github.public_repositories %}
+      {% if repo.full_name == site.repository %}
+        <p>
+          <strong>Last Update:</strong> {{ repo.pushed_at }}<br />
+          Palmaille 124b, 22767 Hamburg<br />
+          0049 151 54 64 90 55<br />
+          <a href="mailto:inbox@sbstjn.com">inbox@sbstjn.com</a>
+        </p>
+      {% endif %}
+    {% endfor %}
+  </div>
+</footer>

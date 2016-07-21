@@ -28,6 +28,7 @@ exclude:
 
 gems:
   - jekyll-gist
+  - jekyll-github-metadata
   - jekyll-mentions
   - jekyll-paginate
   - jekyll-redirect-from
