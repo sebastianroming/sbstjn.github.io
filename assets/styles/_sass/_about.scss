@@ -145,30 +145,39 @@ html body {
         left: 0;
         margin: 0;
         padding: 0;
-        transition: transform .3s ease-in-out;
+        
+        &.init {
+          transition: transform .3s ease-in-out;
+        }
 
         &[data-image="01"] {
           left: 0;
+          background-image: url(/assets/images/sbstjn/01.jpg);
         }
 
         &[data-image="02"] {
           left: 100%;
+          background-image: url(/assets/images/sbstjn/02.jpg);
         }
 
         &[data-image="03"] {
           left: 200%;
+          background-image: url(/assets/images/sbstjn/03.jpg);
         }
 
         &[data-image="04"] {
           left: 300%;
+          background-image: url(/assets/images/sbstjn/04.jpg);
         }
 
         &[data-image="05"] {
           left: 400%;
+          background-image: url(/assets/images/sbstjn/05.jpg);
         }
 
         &[data-image="06"] {
           left: 500%;
+          background-image: url(/assets/images/sbstjn/06.jpg);
         }
 
         &[data-image="01"] {
