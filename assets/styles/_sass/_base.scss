@@ -68,7 +68,7 @@ a, img {
 }
 
 .wrapper {
-  max-width: 760px;
+  max-width: $content-maxwidth;
   margin: 0 auto;
   @extend %clearfix;
 }
