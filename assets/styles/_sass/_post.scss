@@ -22,7 +22,9 @@
 
   .post-meta {
     font-size: 15px;
-    color: $grey-color;
+		font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+		font-size: 12px;
+		color: #BBB;
   }
 }
 
@@ -41,29 +43,18 @@
     font-size: 24px;
   }
 	
-	
-	/*
-  padding: 14px 20px 12px 20px;
-  margin: 0;
-  box-sizing: border-box;
-
-  p:last-child {
-    margin-bottom: 0;
-  }
-
-  @media (min-width: $on-palm) {
-    font-size: 22px;
-  }
-
-  @media (min-width: $content-maxwidth + 2*40px) {
-    padding: 56px 40px 12px 40px;
-    font-size: 24px;
-  }
-
-  @media (min-width: 1000px) {
-    padding: 56px 40px 12px 40px;
-    font-size: 24px;
-  } */
+	p {
+		code {
+			font-family: 'Source Code Pro';
+			font-weight: 500;
+			font-size: 20px;
+			background-color: rgba(0,0,0, 0.04706);
+			padding: 2px 6px 3px 6px;
+			border-radius: 3px;
+			position: relative;
+			top: -1px;
+		}
+	}
 	
 	blockquote {
     font-family: "Source Sans Pro";
@@ -81,7 +72,7 @@
 	
 	pre.highlight {
 		code {
-			font-family: 'Source Code Pro', ;
+			font-family: 'Source Code Pro';
 			font-weight: 500;
 		}
 		

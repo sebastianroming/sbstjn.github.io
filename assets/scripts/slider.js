@@ -32,8 +32,6 @@ $(document).ready(function() {
     location.hash = '#photo-' + getPhotoMapping(next);
   };
 
-  showPhoto(getCurrentPhoto(), true);
-
   $('.about-slider').on('click', 'a', function(event) {
     event.preventDefault();
 
@@ -54,6 +52,8 @@ $(document).ready(function() {
   });
 	
 	if ($('.about-teaser').length === 1) {
+		showPhoto(getCurrentPhoto(), true);
+			
 	  var mc = new Hammer($('.about-teaser')[0]);
 	  mc.on("swipe", function(ev) {
 	    $('.about-slider a[data-move="' + (ev.velocityX > 0 ? '-1' : '1') + '"]').click();
