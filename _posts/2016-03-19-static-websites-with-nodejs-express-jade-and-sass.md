@@ -3,8 +3,8 @@
 layout: post
 title: How to build static web sites with Express, SASS and Jade
 published: true
-date: 2016-06-21
 permalink: /static-websites-with-nodejs-express-jade-and-sass.html
+image: /assets/images/sbstjn/04.jpg
 
 ---
 
