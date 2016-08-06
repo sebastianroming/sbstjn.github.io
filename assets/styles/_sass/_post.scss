@@ -1,7 +1,12 @@
 .post-header {
   margin-bottom: $spacing-unit;
   text-align: center;
-  padding: 0 60px;
+	
+	padding: 0 30px;
+	
+	@media (min-width: $content-maxwidth + 2*40px) {
+		padding: 0 60px;
+	}
 
   .post-title {
     font-size: 42px;
@@ -21,43 +26,70 @@
   }
 }
 
+.post-teaser {
+	.about-tagline {
+		background-color: rgba(0, 0, 0, 0.9);
+		position: fixed;
+	}
+}
+
 .post-content {
-  & {
-    padding-top: 30px;
+	padding: 112px 20px 12px 20px;
+	
+  @media (min-width: $content-maxwidth + 2*40px) {
+    padding: 140px 40px 12px 40px;
+    font-size: 24px;
+  }
+	
+	
+	/*
+  padding: 14px 20px 12px 20px;
+  margin: 0;
+  box-sizing: border-box;
+
+  p:last-child {
     margin-bottom: 0;
-    text-align: justify;
   }
 
-  p code.highlighter-rouge {
-    font-size: 19px;
+  @media (min-width: $on-palm) {
+    font-size: 22px;
+  }
+
+  @media (min-width: $content-maxwidth + 2*40px) {
+    padding: 56px 40px 12px 40px;
+    font-size: 24px;
+  }
+
+  @media (min-width: 1000px) {
+    padding: 56px 40px 12px 40px;
+    font-size: 24px;
+  } */
+	
+	blockquote {
+    font-family: "Source Sans Pro";
     font-weight: 300;
-    position: relative;
-    padding: 2px 4px 2px 4px;
-    top: -1px;
-    background-color: #E4EBF6;
-  }
-
-  h2 {
-    font-size: 32px;
-
-    @include media-query($on-laptop) {
-      font-size: 28px;
-    }
-  }
-
-  h3 {
-    font-size: 26px;
-
-    @include media-query($on-laptop) {
-      font-size: 22px;
-    }
-  }
-
-  h4 {
-    font-size: 20px;
-
-    @include media-query($on-laptop) {
-      font-size: 18px;
-    }
-  }
+    font-style: italic;
+    font-size: 27px;
+    margin-left: -1.75px;
+    line-height: 1.7;
+    letter-spacing: -.014em;
+    color: rgba(0,0,0,.6);
+    border: none;
+    padding: 24px 20px 24px 50px;
+    text-align: left;
+	}
+	
+	pre.highlight {
+		code {
+			font-family: 'Source Code Pro', ;
+			font-weight: 500;
+		}
+		
+    background-color: rgba(0, 0, 0, 0.0470588);
+    padding: 14px 16px;
+		line-height: 22px;
+		overflow: scroll;
+		font-size: 15px;
+		border-radius: 3px;
+	}
 }

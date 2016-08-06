@@ -52,9 +52,11 @@ $(document).ready(function() {
 
     showPhoto(pos + dir);
   });
-
-  var mc = new Hammer($('.about-teaser')[0]);
-  mc.on("swipe", function(ev) {
-    $('.about-slider a[data-move="' + (ev.velocityX > 0 ? '-1' : '1') + '"]').click();
-  });
+	
+	if ($('.about-teaser').length === 1) {
+	  var mc = new Hammer($('.about-teaser')[0]);
+	  mc.on("swipe", function(ev) {
+	    $('.about-slider a[data-move="' + (ev.velocityX > 0 ? '-1' : '1') + '"]').click();
+	  });
+	}
 });

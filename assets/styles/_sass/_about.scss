@@ -1,11 +1,84 @@
 html body {
   background-color: #F9F9F9;
+	-webkit-overflow-scrolling: touch;
+}
+
+.about-tagline {
+	-webkit-overflow-scrolling: touch;
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+	transition: all .2s linear;
+  color: white;
+  padding: 10px 20px 5px 20px;
+  margin: 0;
+  box-sizing: border-box;
+	
+	&.fix {
+		background-color: rgba(0, 0, 0, 0.9);
+		position: fixed;
+		top: 0px;
+		height: 49px;
+	}
+
+  ul, li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    float: right;
+    height: 28px;
+  }
+
+  li {
+    float: left;
+    padding: 0 10px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  a {
+    svg {
+      width: 28px;
+      height: 28px;
+      opacity: 0.6;
+
+      path {
+        fill: white;
+      }
+    }
+
+    &:hover {
+      svg {
+        opacity: 0.8;
+      }
+    }
+  }
+
+
+
+  h2, h2 a {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    color: #E9E9E9;
+		text-decoration: none;
+  }
 }
 
 .about-teaser {
   width: 100%;
   height: 100%;
   position: absolute;
+	
+	.about-tagline {
+	  bottom: 0;
+	}
 
   .about-slider {
     position: absolute;
@@ -56,65 +129,6 @@ html body {
 
     &[data-position="0"] a[data-move="-1"], &[data-position="5"] a[data-move="1"] {
       opacity: 0.3;
-    }
-  }
-
-  .about-tagline {
-    z-index: 10;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 10px 20px 5px 20px;
-    margin: 0;
-    box-sizing: border-box;
-
-    ul, li {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    ul {
-      float: right;
-      height: 28px;
-    }
-
-    li {
-      float: left;
-      padding: 0 10px;
-
-      &:last-child {
-        padding-right: 0;
-      }
-    }
-
-    a {
-      svg {
-        width: 28px;
-        height: 28px;
-        opacity: 0.6;
-
-        path {
-          fill: white;
-        }
-      }
-
-      &:hover {
-        svg {
-          opacity: 0.8;
-        }
-      }
-    }
-
-
-
-    h2 {
-      padding: 0;
-      margin: 0;
-      font-size: 20px;
-      color: #E9E9E9;
     }
   }
 
@@ -203,6 +217,10 @@ html body {
 .about-content {
   position: absolute;
   top: 100%;
+  width: 100%;	
+}
+
+.about-content, .post-content {
   width: 100%;
   padding: 14px 20px 12px 20px;
   margin: 0;
@@ -227,8 +245,9 @@ html body {
   }
 
   footer {
+		margin-top: 60px;
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    padding-top: 34px;
+
     font-size: 12px;
     color: #BBB;
     padding-bottom: 30px;
@@ -237,4 +256,39 @@ html body {
       color: #FCDC9F;
     }
   }
+}
+
+.article-list {
+	ul, li {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+	
+	h3 {
+		margin-bottom: 0;
+		font-size: 26px;
+	}
+	
+	p {
+		font-size: 20px;
+		line-height: 32px;
+		margin-bottom: 0;
+	}
+	
+	li {
+		margin-bottom: 15px;
+	}
+	
+	li:last-child {
+		margin-bottom: 0;
+	}
+	
+	small {
+		font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 12px;
+    color: #BBB;
+    position: relative;
+    top: -10px;
+	}
 }
