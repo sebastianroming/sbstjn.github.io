@@ -38,6 +38,14 @@
 .post-content {
 	padding: 112px 20px 12px 20px;
 	
+	h2 {
+		margin-top: 32px;
+		margin-bottom: 10px;
+		font-size: 34px;
+		font-weight: 600;
+    font-family: "Source Sans Pro";
+	}
+	
   @media (min-width: $content-maxwidth + 2*40px) {
     padding: 140px 40px 12px 40px;
     font-size: 24px;
