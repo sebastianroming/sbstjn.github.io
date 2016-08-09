@@ -1,34 +1,34 @@
-$(document).ready(function() {
+domready(function() {
 	var hasChangedWrapper = false
 		, hasChangedTagLine = false
-		, maxSize = $(window).height()
-		, tagSize = $('.about-tagline').outerHeight()
+		, maxSize = window.innerHeight
+		, tagSize = document.querySelector('.about-tagline').offsetHeight
 		, isTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
 		
-	if ($('.about-slider').length == 1) {
-		maxSize = $('.about-slider').height();
+	if (document.querySelector('.about-slider')) {
+		maxSize = document.querySelector('.about-slider').offsetHeight;
 	}
 	
 	window.requestAnimationFrame(function draw(timestamp) {
-		var pos = parseInt($(window).scrollTop(), 10);
+		var pos = parseInt(document.body.scrollTop, 10);
 		
 		if (!hasChangedWrapper && pos > maxSize/2) {
-			$('.wrapper-responive').addClass('fix');
+			document.querySelector('.wrapper-responive').classList.add('fix');
 			hasChangedWrapper = true;
 		}
 		
 		if (hasChangedWrapper && pos < maxSize/2) {
-			$('.wrapper-responive').removeClass('fix');
+			document.querySelector('.wrapper-responive').classList.remove('fix');
 			hasChangedWrapper = false;
 		}
 		
 		if (!isTouch && !hasChangedTagLine && pos >= (maxSize - tagSize)) {
-			$('.about-tagline').addClass('fix');
+			document.querySelector('.about-tagline').classList.add('fix');
 			hasChangedTagLine = true;
 		}
 		
 		if (!isTouch && hasChangedTagLine && pos < (maxSize - tagSize)) {
-			$('.about-tagline').removeClass('fix');
+			document.querySelector('.about-tagline').classList.remove('fix');
 			hasChangedTagLine = false;
 		}
 			

@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+$base-font-family:    'Source Serif Pro', serif;
+$base-font-size:      21px;
+$small-font-size:     12px;
+$base-font-weight:    300;
+$small-font-size:     $base-font-size * 0.875;
+$base-line-height:    1.7;
+
+$spacing-unit:        60px;
+
+$text-color:          rgba(0,0,0,.8);
+$background-color:    #fdfdfd;
+$brand-color:         #2a7ae2;
+
+$grey-color:          #828282;
+$grey-color-light:    lighten($grey-color, 40%);
+$grey-color-dark:     darken($grey-color, 25%);
+
+$content-maxwidth:    760px;
+$content-width:       860px;
+$on-palm:             600px;
+$on-laptop:           680px;
+
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@import
+  "base",
+  "layout",
+  "about",
+  "post",
+
+  "images",
+  "gist"
+;
