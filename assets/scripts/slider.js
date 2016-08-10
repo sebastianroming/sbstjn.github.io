@@ -51,7 +51,7 @@ domready(function() {
 	});
 	
 	showPhoto(getCurrentPhoto(), true);
-		
+	
   new Hammer(teaser).on("swipe", function(ev) {
 		document.querySelector('.about-slider a[data-move="' + (ev.velocityX > 0 ? '-1' : '1') + '"]').click();
   });

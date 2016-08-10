@@ -12,9 +12,15 @@
         </a>
       </li>
     </ul>
-
-    <h2>
-      <a href="https://sbstjn.com" title="Sebastian Müller - sbstjn.com">{{ include.label }}</a>
-    </h2>
+    
+    {% if include.isHeadline %}
+      <h1>
+        <a href="https://sbstjn.com" title="Sebastian Müller - sbstjn.com">{{ include.label }}</a>
+      </h1>
+    {% else %}
+      <h2>
+        <a href="https://sbstjn.com" title="Sebastian Müller - sbstjn.com">{{ include.label }}</a>
+      </h2>
+    {% endif %}
   </div>
 </div>

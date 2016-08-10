@@ -2,8 +2,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  
+  {% seo %}
+  
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700|Source+Sans+Pro:300italic,600|Source+Code+Pro:500" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700|rce+Sans+Pro:300italic,600|Source+Code+Pro:500"></noscript>
   
   <style>
     {% capture include_to_scssify %}
@@ -15,17 +18,5 @@
   <link rel="preload" href="{{ "/assets/styles/main.css" | prepend: site.baseurl }}" as="style" onload="this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="{{ "/assets/styles/main.css" | prepend: site.baseurl }}"></noscript>
 
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:200italic,400,600,700" as="style" onload="this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:200italic,400,600,700"></noscript>
-  
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600" as="style" onload="this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600"></noscript>
-  
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" as="style" onload="this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500"></noscript>
-
-
   <script src="/assets/scripts/vendor/hammer.js"></script>
-
-  {% seo %}
 </head>
