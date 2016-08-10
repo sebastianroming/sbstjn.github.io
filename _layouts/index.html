@@ -1,53 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+---
 
-  {% include head.html %}
+<div class="about-teaser">
+  <div class="about-slider" data-position="0">
+    <a href="#prev" data-move="-1">&laquo;</a>
+    <a href="#next" data-move="1">&raquo;</a>
+  </div>
+  <div class="about-images">
+    <ul>
+      <li class="about-image" data-image="01"></li>
+      <li class="about-image" data-image="02"></li>
+      <li class="about-image" data-image="03"></li>
+      <li class="about-image" data-image="04"></li>
+      <li class="about-image" data-image="05"></li>
+      <li class="about-image" data-image="06"></li>
+    </ul>
+  </div>
 
-  <body>
-    <div class="about-teaser">
-      <div class="about-slider" data-position="0">
-        <a href="#prev" data-move="-1">&laquo;</a>
-        <a href="#next" data-move="1">&raquo;</a>
-      </div>
-      <div class="about-images">
-        <ul>
-          <li class="about-image" data-image="01"></li>
-          <li class="about-image" data-image="02"></li>
-          <li class="about-image" data-image="03"></li>
-          <li class="about-image" data-image="04"></li>
-          <li class="about-image" data-image="05"></li>
-          <li class="about-image" data-image="06"></li>
-        </ul>
-      </div>
+  {% include about.tagline.html label="Sebastian Müller" isHeadline=true %}
+</div>
 
-      {% include about.tagline.html label="Sebastian Müller" isHeadline=true %}
-    </div>
+<div class="about-content">
+  <div class="wrapper">
+    {{ content }}
+  </div>
 
-    <div class="about-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-      
-      <div class="section-divider">
-        <hr class="section-divider" />
-      </div>
-      
-      <div class="wrapper article-list">
-        <ul>
-          {% for post in site.posts %}
-            <li>
-              <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-              {{ post.excerpt }}
-              <small>{{ post.content | number_of_words }} words, posted on {{ post.date | date: '%B %-d' }}</small>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
+  <div class="section-divider">
+    <hr class="section-divider" />
+  </div>
 
-      {% include footer.html %}
-    </div>
+  <div class="wrapper article-list">
+    <ul>
+      {% for post in site.posts %}
+        <li>
+          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          {{ post.excerpt }}
+          <small>{{ post.content | number_of_words }} words, posted on {{ post.date | date: '%B %-d' }}</small>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 
-    {% include tracking.html %}
-    {% include script.html %}
-  </body>
-</html>
+  {% include footer.html %}
+</div>
