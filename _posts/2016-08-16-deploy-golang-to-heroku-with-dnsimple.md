@@ -4,8 +4,11 @@ layout: post
 title: Use Golang at Heroku and free SSL from CloudFlare.com
 published: true
 date: 2016-08-16
-permalink: /use-golang-at-heroku-and-free-ssl-certificate-from-cloudflare
+permalink: /use-golang-at-heroku-and-free-ssl-certificate-from-cloudflare.html
 image: /assets/images/sbstjn/04.jpg
+redirect_from:
+  - /use-golang-at-heroku-and-free-ssl-certificate-from-cloudflare
+
 
 ---
 

@@ -4,8 +4,10 @@ layout: post
 title: Create a Golang CLI application with Cobra and goxc
 published: true
 date: 2016-08-23
-permalink: /create-golang-cli-application-with-cobra-and-goxc
+permalink: /create-golang-cli-application-with-cobra-and-goxc.html
 image: /assets/images/sbstjn/04.jpg
+redirect_from:
+  - /create-golang-cli-application-with-cobra-and-goxc
 
 ---
 
