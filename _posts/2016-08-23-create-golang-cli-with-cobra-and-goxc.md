@@ -11,7 +11,15 @@ redirect_from:
 
 ---
 
-With [Cobra](https://github.com/spf13/cobra) there exists an awesome and widely used library and generator for Command Line applications in Go. Together with [goxc](https://github.com/laher/goxc) you can create a neat setup to get started with CLI interactions.
+[Cobra](https://github.com/spf13/cobra) is an awesome and widely used library and generator for Command Line applications written in Go. Together with [goxc](https://github.com/laher/goxc) you can easily create a neat setup to get started with CLI interactions.
+
+ - [Create Cobra basics](#create-cobra-basics)
+ - [Branding with a custom name](#branding-with-a-custom-name)
+ - [Build the application with goxc](#build-the-application-with-goxc)
+ - [Usa a Makefile for easy handling](#usa-a-makefile-for-easy-handling)
+
+
+## Create Cobra basics
 
 First install Cobra with `go get` and initialize the command line project. In this case the go application is called `github.com/heft/cli` and after this tutorial it will feature one command to display the compiled version of the `heft` command.
 
@@ -25,13 +33,13 @@ Give it a try by going there and running `go run main.go`
 Add commands to it by running `cobra add [cmdname]`
 ```
 
-After the application is created you can use the `cobra` generator to add commands with `command add` . As said above the application should display its current version, so add a `version` command:
+After the application is created you can use the `cobra` generator to add commands with `cobra add` . As said above the application should display its current version, so add a `version` command:
 
 ```bash
 $ > $GOPATH/bin/cobra add version
 ```
 
-Thanks to the [Cobra framework](https://github.com/spf13/cobra) everything is predefined and you can already use the project. Just run the source code and you will see basic instructions on how to use the new CLI application.
+Thanks to the [Cobra framework](https://github.com/spf13/cobra) everything is predefined and you can already use the project. Just run the generated code and you will see basic instructions on how to use the new CLI application.
 
 ```bash
 $ > go run main.go
@@ -56,7 +64,9 @@ Flags:
 Use "cli [command] --help" for more information about a command.
 ```
 
-The project is stored in `github.com/heft/cli` so cobra uses `cli` as the default name. It's possible to change the name in the `root.go` file: Rename the file to `heft.go` and update the `RootCmd` configuration:
+## Branding with a custom name
+
+As the project is stored in `github.com/heft/cli` cobra uses `cli` as the default name. It's possible to change the command name in the `root.go` file: Rename the file to `heft.go` and update the `RootCmd` configuration:
 
 ```go
 var RootCmd = &cobra.Command{
@@ -65,7 +75,7 @@ var RootCmd = &cobra.Command{
 }
 ```
 
-As a simple naming convention I prefer to rename the `version.go` file to `cmd_version.go` as well and get of course rid of all the unneeded lines inside the command file.
+As a naming convention I prefer to rename the `version.go` file to `cmd_version.go` as well and get rid of all the unneeded lines inside the command file.
 
 ```go
 package cmd
@@ -136,13 +146,15 @@ $ > go run main.go version
 heft 0.0.1
 ```
 
-Nice! We have created a nifty little command line tool which is able to print its name and current version. Let's say our application is now kind of feature complete. It's time to compile a binary for the first time!
+Nice! We have created a nifty little command line tool which is able to print its name and current version. Let's say our application is now kind of feature complete: It's time to compile a binary for the first time!
 
 ```bash
 $ > go build
 $ > ./cli version
 heft 0.0.1
 ```
+
+## Build the application with goxc
 
 When using `go build` the binary file be named `cli` per default, this will change with the `goxc` configuration. To get started create a file called `.goxc.json` with the following content:
 
@@ -180,7 +192,7 @@ You will notice the fans of your machine speed up because `goxc` makes use of al
 [goxc:xc] Parallelizing xc for 16 platforms, using max 7 of 8 processors
 ```
 
-So let's stop this again and tell `goxc` to just compile one binary for now and configure a path where it should store the binary afterwars.
+So let's stop this again and tell `goxc` to just compile one binary for now and configure a path where it should save the binary afterwards.
 
 ```bash
 $ > $GOPATH/bin/goxc \
@@ -247,12 +259,14 @@ build
         └── heft
 ```
 
-Now there is a `heft` binary application which works fine on current `Mac OS X` machines and contains our Cobra application.
+Now there is a `heft` binary application which works fine on current `Mac OS X` machines and contains the Cobra application.
 
 ```bash
 $ > ./build/0.0.1/darwin_amd64/heft version
 heft v0.0.1
 ```
+
+## Usa a Makefile for easy handling
 
 Of course you will forget about all the parameters you can pass to `goxc` and the handling of new versions is kind of messy. Thankfully we have `make` available! Move all commands into a neat `Makefile` with the following content:
 
@@ -273,7 +287,7 @@ version:
 	@echo $(VERSION)
 ```
 
-Run `make build` to have compile the binary file and use `make version` to display the current version. If you set the `VERSION` variable in your `Makefile` to `0.0.2` and run `make build` again you will get a new binary which responds with the increased version:
+Run `make build` to compile the binary file and use `make version` to display the current version. If you set the `VERSION` variable in your `Makefile` to `0.0.2` and run `make build` again you will get a new binary which responds with the increased version:
 
 ```bash
 $ > make build
