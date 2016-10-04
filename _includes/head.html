@@ -2,12 +2,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+  {% if page.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
+
   {% seo %}
-  
+
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700|Source+Sans+Pro:300italic,600|Source+Code+Pro:500" as="style" onload="this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700|rce+Sans+Pro:300italic,600|Source+Code+Pro:500"></noscript>
-  
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700|Source+Sans+Pro:300italic,600|Source+Code+Pro:500"></noscript>
+
   <style>
     {% capture include_to_scssify %}
       {% include styles/critical.scss %}
@@ -17,6 +18,8 @@
 
   <link rel="preload" href="{{ "/assets/styles/main.css" | prepend: site.baseurl }}" as="style" onload="this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="{{ "/assets/styles/main.css" | prepend: site.baseurl }}"></noscript>
-  
+
   <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAD//wAA/n8AAPw/AAD4HwAA8A8AAOAHAADgBwAA4AcAAPGPAAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon" />
+
+  <meta property="fb:pages" content="349571948500844" />
 </head>
