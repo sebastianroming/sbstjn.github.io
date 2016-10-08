@@ -1,0 +1,36 @@
+---
+layout: work
+title: Sebastian Müller
+permalink: /work
+image: /assets/images/sbstjn/04.jpg
+noindex: true
+---
+
+<ul class="work-listing">
+{% assign sorted = (site.data.work | sort: 'start') %}
+
+{% for work in sorted reversed %}
+  <li class="work-listing--item">
+    <h3>{{ work.job }}</h3>
+    <span class="subline"><a href="{{ work.company.url }}">{{ work.company.name }}</a><span class="divider"> - </span>{% unless work.current %}
+      {% assign ended = work.ended | date: '%s' %}
+      {% assign start = work.start | date: '%s' %}
+      {% assign duration = ended | minus: start %}
+      for {{ duration | divided_by: 86400 }} days until {{ work.until }}
+    {% else %}
+      since <span id="current">{{ work.start }}</span>
+      <script>
+        (function() {
+          var element = document.getElementById('current');
+          var str = element.innerHTML.split('-').map(function(el) { return parseInt(el, 10); });
+          var start = new Date(str[0], str[1], str[2], 0, 0, 0, 0);
+          var now = new Date();
+          var diff = now - start;
+          element.innerHTML = parseInt(diff / 86400000, 10) + ' days, started in {{ work.from }}';
+        })();
+      </script>
+    {% endunless %}</span>
+    <p>{{ work.description }}</p>
+  </li>
+{% endfor %}
+</ul>

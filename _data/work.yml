@@ -1,0 +1,57 @@
+- company:
+    name: Jimdo
+    url: http://jimdo.com
+  job: Flight Captain & Team&nbsp;Lead
+  city: Hamburg, Germany
+  start: 2014-11-01
+  from: 2014
+  current: true
+  description: >
+    Together with my team I make sure Jimdo’s website builder and more than 15 million websites
+    from our customers work like a charm. We take care of the ongoing maintenance and development of core components as well as
+    building new features to ensure the product creates value for our customers. Being the
+    first contact person for all non-developers I also emphasise building internal tools that
+    empower everyone within the company to support our customer in the best possible way.
+
+- company:
+    name: Elephant Seven
+    url: http://e-7.com
+  job: Senior Developer
+  city: Hamburg, Germany
+  start: 2013-10-01
+  ended: 2014-10-31
+  until: 2014
+  description: >
+    Working in an agency may sound boring and stressful for product developers or managers. It
+    definitely is stressful, but as a Senior Developer at E7 I was delighted to work for
+    countless clients, all of them best of their branches. Thanks to Elephant Seven I was able to
+    achieve a <em>Red Dot Award for Game design</em> and compete to win a Cannes Lion for an iOS
+    application.
+
+- company:
+    name: Intuity Media Lab
+    url: http://intuity.de
+  job: Concept & Technology
+  city: Hamburg, Germany
+  start: 2012-12-01
+  ended: 2013-08-31
+  until: 2013
+  description: >
+    At the Intuity Media Lab I had the chance to work with some of the most talented designers
+    I know. We created everything from design studies and iOS apps to soldered hardware
+    prototypes of human interfaces based on Arduino and the Raspberry Pi platform.
+
+- company:
+    name: Roamsys
+    url: http://roamsys.com/
+  job: Scrum Master & Lead&nbsp;Developer
+  city: Trier, Germany
+  start: 2008-08-01
+  ended: 2012-11-30
+  until: 2012
+  description: >
+    Being the first engineer of a startup comes with a lot of freedom and requires a large
+    amount of responsibility. Whenever you can start to design and code on a whiteboard dreams
+    come true. I learnt a lot about communication, managing teams, supporting engineers and
+    how to establish processes while helping the company to grow and become a leading provider
+    of software solutions for the telecommunications industry.

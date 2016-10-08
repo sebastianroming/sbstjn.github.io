@@ -1,9 +1,9 @@
 .post-header {
   margin-bottom: $spacing-unit;
   text-align: center;
-	
+
 	padding: 0 30px;
-	
+
 	@media (min-width: $content-maxwidth + 2*40px) {
 		padding: 0 60px;
 	}
@@ -29,15 +29,19 @@
 }
 
 .post-teaser {
-	.about-tagline {
-		background-color: rgba(0, 0, 0, 0.9);
-		position: fixed;
-	}
+  .about-tagline {
+    position: relative;
+
+    &:not(.unfixable) {
+  		background-color: rgba(0, 0, 0, 0.9);
+  		position: fixed;
+  	}
+  }
 }
 
 .post-content {
 	padding: 112px 20px 12px 20px;
-	
+
 	h2 {
 		margin-top: 32px;
 		margin-bottom: 10px;
@@ -45,12 +49,12 @@
 		font-weight: 600;
     font-family: "Source Sans Pro";
 	}
-	
+
   @media (min-width: $content-maxwidth + 2*40px) {
     padding: 140px 40px 12px 40px;
     font-size: 24px;
   }
-	
+
 	p {
 		code {
 			font-family: 'Source Code Pro';
@@ -63,7 +67,7 @@
 			top: -1px;
 		}
 	}
-	
+
 	blockquote {
     font-family: "Source Sans Pro";
     font-weight: 300;
@@ -77,13 +81,13 @@
     padding: 24px 20px 24px 50px;
     text-align: left;
 	}
-	
+
 	pre.highlight {
 		code {
 			font-family: 'Source Code Pro';
 			font-weight: 500;
 		}
-		
+
     background-color: rgba(0, 0, 0, 0.0470588);
     padding: 14px 16px;
 		line-height: 22px;

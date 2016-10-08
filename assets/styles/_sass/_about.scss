@@ -170,7 +170,7 @@ html body {
 
         &[data-image="01"] {
           left: 0;
-          background-image: url(/assets/images/sbstjn/01.jpg);
+          background-image: url(/assets/images/sbstjn/07.jpg);
         }
 
         &[data-image="02"] {
@@ -200,10 +200,14 @@ html body {
 
         &[data-image="07"] {
           left: 600%;
-          background-image: url(/assets/images/sbstjn/07.jpg);
+          background-image: url(/assets/images/sbstjn/01.jpg);
         }
 
         &[data-image="01"] {
+          background-position: top center;
+        }
+
+        &[data-image="07"] {
           background-position: -100px center;
 
           @media (min-width: 640px) {
@@ -211,7 +215,7 @@ html body {
           }
         }
 
-        &[data-image="02"], &[data-image="04"], &[data-image="05"], &[data-image="07"] {
+        &[data-image="02"], &[data-image="04"], &[data-image="05"] {
           background-position: center center;
         }
 
@@ -275,8 +279,9 @@ html body {
 	}
 
 	h3 {
-		margin-bottom: 0;
+		margin-bottom: 6px;
 		font-size: 26px;
+		line-height: 36px;
 	}
 
 	p {
@@ -298,6 +303,6 @@ html body {
     font-size: 12px;
     color: #BBB;
     position: relative;
-    top: -10px;
+    top: -4px;
 	}
 }

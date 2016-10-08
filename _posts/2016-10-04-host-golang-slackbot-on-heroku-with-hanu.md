@@ -26,7 +26,7 @@ Use your web browser and open your team's Slack account, in my case that's `heft
 
 Click on `Build` in the upper right corner and select to create a custom integration. Slack will show you a couple of options and as we want to connect a bot using the **Slack Real Time Messaging API** you should select corresponding option:
 
-![Slack RTM API](http://localhost:4000/assets/images/posts/2016-10-04-host-golang-slackbot-on-heroku-with-hanu/slack-configuration.png)
+![Slack RTM API](/assets/images/posts/2016-10-04-host-golang-slackbot-on-heroku-with-hanu/slack-configuration.png)
 
 Follow the next steps in the Slack dialog and choose a name for you bot, upload an image and configure a description which will be shown in your bot's profile. And write down the bot's API token of course! This will be needed for connecting [hanu](https://github.com/sbstjn/hanu) to the Slack API.
 
@@ -92,11 +92,11 @@ The example code above configures three commands and [hanu](https://github.com/s
 
 You can communicate with your bot using direct messages and mentions as well. The reply from the bot will of course include your username to identify the response to your request if you have multiple users requesting tasks from your bot.
 
-![hanu Slackbot](http://localhost:4000/assets/images/posts/2016-10-04-host-golang-slackbot-on-heroku-with-hanu/slack-bot-example-one.png)
+![hanu Slackbot](/assets/images/posts/2016-10-04-host-golang-slackbot-on-heroku-with-hanu/slack-bot-example-one.png)
 
 As said before, [hanu](https://github.com/sbstjn/hanu) auto-generates a command overview. Whenever you ask the bot for `help` it will show you a list of available commands with a description, when configured:
 
-![hanu Slackbot command list](http://localhost:4000/assets/images/posts/2016-10-04-host-golang-slackbot-on-heroku-with-hanu/slack-bot-help.png)
+![hanu Slackbot command list](/assets/images/posts/2016-10-04-host-golang-slackbot-on-heroku-with-hanu/slack-bot-help.png)
 
 The example code from [hanu's README.md](https://github.com/sbstjn/hanu/blob/master/README.md) uses the minimal setup for a bot's command. To learn more about commands and their descriptions you should have a look at the detailed [hanu-example](https://github.com/sbstjn/hanu-example) project on GitHub …
 
