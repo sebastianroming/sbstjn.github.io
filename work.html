@@ -6,31 +6,85 @@ image: /assets/images/sbstjn/04.jpg
 noindex: true
 ---
 
-<ul class="work-listing">
-{% assign sorted = (site.data.work | sort: 'start') %}
+<div id="personality">
+  <p>
+    I love to build projects around motivated individuals while providing my team with the environment
+    they need to grow, evolve, and for getting the best possible results. Being a Team Lead my
+    success is measured by the success of my team and all its members. I enjoy providing technical guidance
+    and support in the process of planning and decision making. To ensure my team’s priorities are reflected
+    within the product roadmap I work closely with product managers to plan the next steps for my
+    team, the product, and the company.
+  </p>
+  <p>
+    Kaizen and ongoing, regular, and informal feedback are important core values I believe in: No
+    matter how good I already am, I can always get better and I do believe in the power of small
+    improvements.
+  <p>
+  <p>
+    Read my <a href="/manifesto">manifesto</a> to learn how I prefer to work and live!
+  </p>
+</div>
 
-{% for work in sorted reversed %}
-  <li class="work-listing--item">
-    <h3>{{ work.job }}</h3>
-    <span class="subline"><a href="{{ work.company.url }}">{{ work.company.name }}</a><span class="divider"> - </span>{% unless work.current %}
-      {% assign ended = work.ended | date: '%s' %}
-      {% assign start = work.start | date: '%s' %}
-      {% assign duration = ended | minus: start %}
-      for {{ duration | divided_by: 86400 }} days until {{ work.until }}
-    {% else %}
-      since <span id="current">{{ work.start }}</span>
-      <script>
-        (function() {
-          var element = document.getElementById('current');
-          var str = element.innerHTML.split('-').map(function(el) { return parseInt(el, 10); });
-          var start = new Date(str[0], str[1], str[2], 0, 0, 0, 0);
-          var now = new Date();
-          var diff = now - start;
-          element.innerHTML = parseInt(diff / 86400000, 10) + ' days, started in {{ work.from }}';
-        })();
-      </script>
-    {% endunless %}</span>
-    <p>{{ work.description }}</p>
-  </li>
-{% endfor %}
-</ul>
+<style>
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Montserrat-Regular'), url(http://themes.googleusercontent.com/static/fonts/montserrat/v4/zhcz-_WihjSQC0oHJ9TCYBsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+  }
+
+  .button {
+    width: 280px;
+    display: block;
+    border-radius:3px;
+    margin: 0  auto;
+    padding:15px 0px;
+    text-align:center;
+    text-decoration:none;
+    font: 24px Montserrat,Helvetica,sans-serif;
+    color:#fff;
+    background-color:#00cdae;
+    text-shadow: 0px 1px 1px #888;
+    box-shadow: 0px 4px #00ae94;
+  }
+
+  .button:hover {
+    color:#fff;
+    text-decoration: none;
+    position: relative;
+    top: 1px;
+    box-shadow: 0px 3px #00ae94;
+  }
+
+  .button-info {
+    display: block;
+    font-size: 14px;
+    color: #AAA;
+    font-weight: 300;
+    font-family: "Source Sans Pro";
+    font-style: italic;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .button-info a {
+    color: #BBB;
+    text-decoration: none;
+    border-bottom: 1px solid #BBB;
+    cursor: pointer;
+  }
+
+  .button-info a:hover {
+    text-decoration: none;
+    color: #AAA;
+    border-bottom: 1px solid #AAA;
+  }
+</style>
+
+<div class="section-divider">
+  <hr class="section-divider" />
+</div>
+
+<a class="button" href="https://docs.google.com/document/d/1efYvg_RNoP7AIGyicMFbHXJfvhbHZ5Yb-GF_d-eCy9k/edit">Show Resume</a>
+<span class="button-info">Access using Google Docs or <a href="https://docs.google.com/document/export?format=pdf&id=1efYvg_RNoP7AIGyicMFbHXJfvhbHZ5Yb-GF_d-eCy9k">download PDF</a>.</span>
