@@ -9,7 +9,7 @@ image: /assets/images/sbstjn/07.jpg
 
 ---
 
-After watching all [Mr. Robot](http://www.imdb.com/title/tt4158110/) episodes I somehow felt the need to buy an [Amazon Echo](https://www.reddit.com/r/amazonecho/comments/532lgw/alexa_scene_on_mr_robot/) and get introduced to Alexa. Luckily Amazon sent me an invite to buy Echo just a couple of days before Christmas and so I got the perfect gift for myself and an awesome reason to spend some time coding during the Christmas holidays.
+After watching all [Mr. Robot](http://www.imdb.com/title/tt4158110/) episodes, I somehow felt the need to buy an [Amazon Echo](https://www.reddit.com/r/amazonecho/comments/532lgw/alexa_scene_on_mr_robot/) and get introduced to Alexa. Luckily Amazon sent me an invite to buy Echo just a couple of days before Christmas and so I got the perfect gift for myself and an awesome reason to spend some time coding during the Christmas holidays.
 
 # Echo? Alexa? Why?
 
@@ -51,7 +51,7 @@ To test the basic setup just add a simple structure for an AWS Lambda function t
 })();
 ```
 
-When using `apex` it's now dead simple to deploy that function to Amazon Web Services and invoke the deployed code from your command line.
+When using `apex`, it's now dead simple to deploy that function to Amazon Web Services and invoke the deployed code from your command line.
 
 ```bash
 $ > apex deploy
@@ -102,7 +102,7 @@ You will see how the final function looks like after the next steps, or you can 
 
 In order to test and use the Alexa Skill, you need to sign up for a free [Amazon Developer Account](https://developer.amazon.com/). After you are logged in to your account, you can access the `Alexa` section and get started with using the `Alexa Skills kit` to create your Skill.
 
-Right now all custom Alexa skills need be invoked by a command – for example, their name. As long as you do not write a Skill for a known company you are required to configure a name and invocation command with two words, for example `Example App`:
+Right now all custom Alexa skills need be invoked by a command – for example, their name. As long as you do not write a Skill for a known company you are required to configure a name and invocation command with two words, for example, `Example App`:
 
 ![Amazon Developer Console for Alexa Skil](/assets/images/posts/2017-01-06-custom-alexa-skill-for-amazon-echo-lambda/skill_setup.png)
 
@@ -154,7 +154,7 @@ Together with the initial configuration of your **Skill** Alexa will recognize a
 
 # Configure AWS Lambda endpoint
 
-On the next screen of Amazon's configuration wizard you are prompted for your AWS Lambda ARN of the deployed function which responds to a request by Alexa.
+On the next screen of Amazon's configuration wizard, you are prompted for your AWS Lambda ARN of the deployed function which responds to a request by Alexa.
 
 You can obtain the needed ARN information after logging into your AWS account and selecting your deployed AWS Lambda function. The ARN is located in the top right corner, just copy it into the wizard and make sure you have selected to correct AWS region.
 
@@ -164,7 +164,7 @@ The wizard won't let you save the ARN information unless you configure the AWS L
 
 ![AWS Lambda Alexa Skill Trigger](/assets/images/posts/2017-01-06-custom-alexa-skill-for-amazon-echo-lambda/lambda_trigger.png)
 
-After you enabled the `Alex Skill Kit` as the trigger for your AWS Lambda function the Amazon wizard will allow you to proceed to the next step of configuring your new **Alex Skill**.
+After you enabled the `Alex Skill Kit` as the trigger for your AWS Lambda function, the Amazon wizard will allow you to proceed to the next step of configuring your new **Alex Skill**.
 
 ![Alexa Lambda Configuration](/assets/images/posts/2017-01-06-custom-alexa-skill-for-amazon-echo-lambda/skill_lambda.png)
 
@@ -172,7 +172,7 @@ After you enabled the `Alex Skill Kit` as the trigger for your AWS Lambda functi
 
 Luckily Amazon has something called `Service Simulator` for Alexa, so you don't have to wake up everybody in your house if you plan to debug and enhance your Alex Skill in the middle of the night.
 
-If you set up everything correct, you should be able to enter an Utterance like `What is 5?` and be shown the static response of the deployed function. In this case `Alexa responds with this text` from the JSON structure a few step before.
+If you set up everything correct, you should be able to enter an Utterance like `What is 5?` and be shown the static response of the deployed function. In this case, `Alexa responds with this text` from the JSON structure a few step before.
 
 ![Alexa Lambda Simulator](/assets/images/posts/2017-01-06-custom-alexa-skill-for-amazon-echo-lambda/skill_simulator.png)
 
@@ -245,11 +245,11 @@ After you deploy the code above Alexa will respond with different answers to the
 
 # Testing Alexa Skill
 
-Beside the **Alexa Service Simulator** you can easily enable testing with your device and start talking to Alexa while deploying a new version of your Lambda function.
+Beside the **Alexa Service Simulator**, you can easily enable testing with your device and start talking to Alexa while deploying a new version of your Lambda function.
 
 ![Alexa Skill Testing on your Echo device](/assets/images/posts/2017-01-06-custom-alexa-skill-for-amazon-echo-lambda/skill_test.png)
 
-The last two steps in the Amazon wizard will cover *Publishing Information* about your skill if you plan to release it to the Alexa Skill Store. As long as you are just testing a Skill this is not needed and you are all setup with the basics for developing your own Alexa Skill. Have fun!
+The last two steps in the Amazon wizard will cover *Publishing Information* about your skill if you plan to release it to the Alexa Skill Store. As long as you are just testing a Skill, this is not needed and you are all setup with the basics for developing your own Alexa Skill. Have fun!
 
 All code needed for this example is available on GitHub of course! Check out my [alexa-example-skill](https://github.com/sbstjn/alexa-example-skill) repository! There are a couple of [frameworks](https://github.com/amzn/alexa-skills-kit-js) and [toolkits](https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs) which offer a good starting point for your Skill development as you are now familiar with all the basic setup.
 
