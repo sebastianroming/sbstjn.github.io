@@ -5,7 +5,7 @@ title: Custom Alexa skill for Amazon Echo with AWS Lambda
 published: true
 date: 2017-01-06
 permalink: /custom-alexa-skill-for-amazon-echo-with-lambda.html
-image: /assets/images/sbstjn/07.jpg
+image: /assets/images/posts/2017-01-06-custom-alexa-skill-for-amazon-echo-lambda/splash.jpg
 
 ---
 
