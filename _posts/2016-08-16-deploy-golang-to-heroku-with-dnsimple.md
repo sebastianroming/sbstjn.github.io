@@ -254,7 +254,7 @@ Done.
 
 That's kind of the same setting you already achieved with DNSimple.com so let's configure free SSL for the custom domain. First create a new rule in CloudFlare for all HTTP requests matching `http://*mtrs.io*` to always use HTTPS:
 
-![CloudFlare.com Rules - Redirect HTTP to HTTPS](http://localhost:4000/assets/images/posts/cloudflare_rules.png)
+![CloudFlare.com Rules - Redirect HTTP to HTTPS](https://sbstjn.com/assets/images/posts/cloudflare_rules.png)
 
 Now every request to `http://mtrs.io` includes a `301 Moved Permanently` header and a `Location: https://mtrs.io` information:
 
