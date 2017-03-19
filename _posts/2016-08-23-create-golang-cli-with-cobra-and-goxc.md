@@ -13,12 +13,6 @@ redirect_from:
 
 [Cobra](https://github.com/spf13/cobra) is an awesome and widely used library and generator for Command Line applications written in Go. Together with [goxc](https://github.com/laher/goxc) you can easily create a neat setup to get started with CLI interactions.
 
- - [Create Cobra basics](#create-cobra-basics)
- - [Branding with a custom name](#branding-with-a-custom-name)
- - [Build the application with goxc](#build-the-application-with-goxc)
- - [Usa a Makefile for easy handling](#usa-a-makefile-for-easy-handling)
-
-
 ## Create Cobra basics
 
 First install Cobra with `go get` and initialize the command line project. In this case the go application is called `github.com/heft/cli` and after this tutorial it will feature one command to display the compiled version of the `heft` command.

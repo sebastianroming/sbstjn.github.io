@@ -10,11 +10,6 @@ image: /assets/images/sbstjn/04.jpg
 
 It's not a secret you can easily host any static website on Amazon S3 without cryptic configuration. When you add CloudFront for HTTPS delivery and the Amazon Certificate Manager for free SSL certificates you will get a neat setup.
 
- - [Create an Amazon S3 Bucket](#create-an-amazon-s3-bucket)
- - [Create an SSL Certificate](#create-an-ssl-certificate)
- - [Configure CloudFront](#configure-cloudfront)
- - [Use Route53 for DNS](#use-route53-for-dns)
-
 With the [AWS free tier](https://aws.amazon.com/free/) you can store up to 5Gb of files and handle 20.000 `GET` requestson Amazon S3 each month for free. After the 12 months trial period the default [Amazon S3 pricing](https://aws.amazon.com/s3/) kicks in …
 
 ## Create an Amazon S3 Bucket

@@ -13,11 +13,6 @@ redirect_from:
 
 After attending a talk at the *GitHub Universe 2016* about [Hubot](https://hubot.github.com/), I felt the need to write a little `Go` library to speed up my process of creating bots for Slack. With [hanu](https://github.com/sbstjn/hanu) you can get started with the buzzword *ChatOps* in seconds. The final bot will be running on Heroku using a *worker dyno*, but of course this works fine on your local machine as well …
 
-- [Create a token for the Slack API](#create-a-token-for-the-slack-api)
-- [Hanu example code from GitHub](#hanu-example-code-from-github)
-- [Register Slackbot commands with hanu](#register-slackbot-commands-with-hanu)
-- [Deploy your Slackbot to Heroku](#deploy-your-slackbot-to-heroku)
-
 One key to Slack's great success is for sure the easy API and good documentation. All we need to connect the [hanu](https://github.com/sbstjn/hanu) bot to Slack is an API token!
 
 ## Create a token for the Slack API

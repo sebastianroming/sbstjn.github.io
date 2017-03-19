@@ -14,12 +14,6 @@ redirect_from:
 
 It only takes a couple of minutes to deploy a [go application](https://golang.org/) to a free [Heroku](https://heroku.com) dyno, use a custom domain name and enable free SSL using [CloudFlare](https://www.cloudflare.com/). If you still have some seconds left *- and you will -* it's dead simple to add [Prometheus](https://prometheus.io/) metrics as well.
 
- - [Simple web server using go and gin](#simple-web-server-using-go-and-gin)
- - [​Configure prometheus client library​](#configure-prometheus-client-library)
- - [​Deploy application to Heroku​](#deploy-application-to-heroku)
- - [​Use custom domain with Heroku​](#use-custom-domain-with-heroku)
- - [​Use CloudFlare.com for free SSL​](#use-cloudflarecom-for-free-ssl)
-
 ## Simple web server using go and gin
 
 For easy HTTP handling the go application will make use of the [gin web server](https://github.com/gin-gonic/gin) framework. The following lines are everything needed to have an application respond to HTTP requests:

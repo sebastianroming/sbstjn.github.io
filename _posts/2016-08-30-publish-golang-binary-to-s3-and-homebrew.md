@@ -13,12 +13,6 @@ redirect_from:
 
 After the setup of a [go command line tool with Cobra](https://sbstjn.com/create-golang-cli-application-with-cobra-and-goxc.html) it's now time to release it to the public and publish it to Homebrew for easy installation on MacOS. Together with the steps to [use AWS S3, CloudFront and SSL Certificate Manager for easy web hosting](https://sbstjn.com/static-hosting-amazon-s3-cloudfront-and-ssl-certificate-manager.html#create-an-ssl-certificate.html) it's a pretty neat setup for your Homebrew application formula and go binary.
 
-- [Prepare an Amazon S3 bucket](#prepare-an-amazon-s3-bucket)
-- [Configure goxc](#configure-goxc)
-- [Extend the Makefile](#extend-the-makefile)
-- [Create Homebrew Formular](#create-homebrew-formular)
-
-
 ## Prepare an Amazon S3 bucket
 
 The created [`heft` CLI application](https://github.com/heft/cli) has a command called `version` which responds with `v0.0.3` as the built version. The `Makefile` uses `goxc` to build a binary stored in `build/` and now we want to create an Amazon S3 bucket to store the binary for public access:
