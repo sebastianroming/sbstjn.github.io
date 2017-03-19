@@ -20,6 +20,17 @@ layout: default
 
       <div itemprop="articleBody">
         {{ content }}
+
+        {% if page.github %}
+
+          <div class="section-divider">
+            <hr class="section-divider" />
+          </div>
+
+          <a class="button" href="{{ page.github }}">View on GitHub</a>
+          <span class="button-info">Source code is published using the <a href="{{ page.github }}/blob/master/LICENSE.md">MIT license</a>.</span>
+
+        {% endif %}
       </div>
 
     </article>

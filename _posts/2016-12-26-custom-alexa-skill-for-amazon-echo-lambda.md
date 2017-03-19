@@ -6,7 +6,7 @@ published: true
 date: 2017-01-06
 permalink: /custom-alexa-skill-for-amazon-echo-with-lambda.html
 image: /assets/images/posts/2017-01-06-custom-alexa-skill-for-amazon-echo-lambda/splash.jpg
-
+github: https://github.com/sbstjn/alexa-example-skill
 ---
 
 After watching all [Mr. Robot](http://www.imdb.com/title/tt4158110/) episodes, I somehow felt the need to buy an [Amazon Echo](https://www.reddit.com/r/amazonecho/comments/532lgw/alexa_scene_on_mr_robot/) and get introduced to Alexa. Luckily Amazon sent me an invite to buy Echo just a couple of days before Christmas and so I got the perfect gift for myself and an awesome reason to spend some time coding during the Christmas holidays.
@@ -252,10 +252,3 @@ Beside the **Alexa Service Simulator**, you can easily enable testing with your 
 The last two steps in the Amazon wizard will cover *Publishing Information* about your skill if you plan to release it to the Alexa Skill Store. As long as you are just testing a Skill, this is not needed and you are all setup with the basics for developing your own Alexa Skill. Have fun!
 
 All code needed for this example is available on GitHub of course! Check out my [alexa-example-skill](https://github.com/sbstjn/alexa-example-skill) repository! There are a couple of [frameworks](https://github.com/amzn/alexa-skills-kit-js) and [toolkits](https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs) which offer a good starting point for your Skill development as you are now familiar with all the basic setup.
-
-<div class="section-divider">
-  <hr class="section-divider" />
-</div>
-
-<a class="button" href="https://github.com/sbstjn/alexa-example-skill">View on GitHub</a>
-<span class="button-info">Source code is published using the <a href="https://github.com/sbstjn/alexa-example-skill/blob/master/LICENSE.md">MIT license</a>.</span>
