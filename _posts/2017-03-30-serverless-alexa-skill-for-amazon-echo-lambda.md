@@ -19,7 +19,7 @@ The supported features in Alexa are called **Skills** and must be activated usin
 
 # Let's get started
 
-As nobody wants to maintain infrastructure, let's go for using AWS Lambda instead of hosting a custom HTTPS endpoint to use with Alexa. Of course you do not want to use the AWS console to configure your setup manually; you should use a third-party tooling to setup all ressources. I already described how to use [Apex](https://sbstjn.com/custom-alexa-skill-for-amazon-echo-with-lambda.html) to deploy your function, but using [serverless](https://serverless.com) will make some steps of the old tutorial obsolete and you can start developing your custom skill way faster!
+As nobody wants to maintain infrastructure, let's go for using AWS Lambda instead of hosting a custom HTTPS endpoint to use with Alexa. Of course, you do not want to use the AWS console to configure your setup manually; you should use a third-party tooling to setup all resources. I already described how to use [Apex](https://sbstjn.com/custom-alexa-skill-for-amazon-echo-with-lambda.html) to deploy your function, but using [serverless](https://serverless.com) will make some steps of the old tutorial obsolete, and you can start developing your custom skill way faster!
 
 ```bash
 $ > npm install -g serverless
@@ -107,11 +107,11 @@ $ > sls invoke -f handler
 
 ```
 
-Basically, that's all you need as foundation to handle requests from a custom Alexa Skill.
+Basically, that's all you need as the foundation to handle requests from a custom Alexa Skill.
 
 # Alexa's response
 
-Amazon requires your Lambda function to return JSON data in order to process the information for Alexa. The minimal structure for a response comes down to – of course – the sentence Alexa will say and some information about the answer to the request to display and rate in the Alexa *companion application* on your mobile phone.
+Amazon requires your Lambda function to return JSON data to process the information for Alexa. The minimal structure for a response comes down to – of course – the sentence Alexa will say and some information about the answer to the request to display and rate in the Alexa *companion application* on your mobile phone.
 
 ```javascript
 'use strict';
@@ -140,13 +140,13 @@ You will see how the final function looks like after the next steps, or you can 
 
 # Amazon Developer Console
 
-In order to test and use the Alexa Skill, you need to sign up for a free [Amazon Developer Account](https://developer.amazon.com/). After you are logged in to your account, you can access the `Alexa` section and get started with using the `Alexa Skills kit` to create your Skill.
+To test and use the Alexa Skill, you need to sign up for a free [Amazon Developer Account](https://developer.amazon.com/). After you are logged in to your account, you can access the `Alexa` section and get started with using the `Alexa Skills kit` to create your Skill.
 
 Right now all custom Alexa skills need be invoked by a command – for example, their name. As long as you do not write a Skill for a known company you are required to configure a name and invocation command with two words, for example, `Example App`:
 
 ![Amazon Developer Console for Alexa Skil](/assets/images/posts/2017-01-06-custom-alexa-skill-for-amazon-echo-lambda/skill_setup.png)
 
-Using this configuration your Echo will respond to voice commands like `Alexa, open Example App` and `Alexa, ask Example App XYZ` .
+Using this configuration, your Echo will respond to voice commands like `Alexa, open Example App` and `Alexa, ask Example App XYZ` .
 
 # Interaction Model
 
@@ -221,7 +221,7 @@ As you now have the Account ID and the name of the function, you can easily conc
 arn:aws:lambda:eu-west-1:1234567890:function:serverless-alexa-skill-dev-handler
 ```
 
-Now just enter the ARN in your application configuration and continue to use the setup wizzard for your new Alexa skill.
+Now just enter the ARN in your application configuration and continue to use the setup wizard for your new Alexa skill.
 
 ![Alexa Lambda Configuration](/assets/images/posts/2017-01-06-custom-alexa-skill-for-amazon-echo-lambda/skill_lambda.png)
 
@@ -304,6 +304,6 @@ Beside the **Alexa Service Simulator**, you can easily enable testing with your 
 
 ![Alexa Skill Testing on your Echo device](/assets/images/posts/2017-01-06-custom-alexa-skill-for-amazon-echo-lambda/skill_test.png)
 
-The last two steps in the Amazon wizard will cover *Publishing Information* about your skill if you plan to release it to the Alexa Skill Store. As long as you are just testing a Skill, this is not needed and you are all setup with the basics for developing your own Alexa Skill. Have fun!
+The last two steps in the Amazon wizard will cover *Publishing Information* about your skill if you plan to release it to the Alexa Skill Store. As long as you are just testing a Skill, this is not needed, and you are all setup with the basics for developing your own Alexa Skill. Have fun!
 
 All code needed for this example is available on GitHub of course! Check out my [serverless-alexa-skill](https://github.com/sbstjn/serverless-alexa-skill) repository! There are a couple of [frameworks](https://github.com/amzn/alexa-skills-kit-js) and [toolkits](https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs) which offer a good starting point for your Skill development as well.
