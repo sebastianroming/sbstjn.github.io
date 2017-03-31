@@ -7,6 +7,7 @@ date: 2017-03-30
 permalink: /serverless-alexa-skill-for-amazon-echo-with-aws-lambda.html
 image: /assets/images/posts/2017-01-06-custom-alexa-skill-for-amazon-echo-lambda/splash.jpg
 github: https://github.com/sbstjn/serverless-alexa-skill
+description: Learn how to deploy a custom Alexa skill for your Amazon Echo using the Serverless framework and AWS Lambda. No custom HTTPS backend needed!
 ---
 
 If you read my first article about [Amazon Alexa and AWS Lambda](https://sbstjn.com/custom-alexa-skill-for-amazon-echo-with-lambda.html), you already know how to deploy a custom Alexa skill using [Apex](http://apex.run). With this article, you will learn how to use the [Serverless](https://serverless.com) framework to deploy a function to AWS Lambda and invoke it with your Amazon Echo using voice commands.
