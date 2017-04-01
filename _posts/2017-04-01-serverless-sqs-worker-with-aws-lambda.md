@@ -3,11 +3,11 @@
 layout: post
 title: Serverless Amazon SQS Worker with AWS Lambda
 published: true
-date: 2017-03-31
+date: 2017-04-01
 permalink: /serverless-sqs-worker-with-aws-lambda.html
 github: https://github.com/sbstjn/sqs-worker-serverless
 description: Have you ever wondered how to process messages from SQS with AWS Lambda? Use a CloudWatch Schedule with Alarms on the queue length for auto-scaling!
-image: /assets/images/posts/2017-03-31-serverless-sqs-worker-with-aws-lambda/splash.jpg
+image: /assets/images/posts/2017-04-01-serverless-sqs-worker-with-aws-lambda/splash.jpg
 ---
 
 Have you ever wondered how to process messages from SQS without maintaining infrastructure? Amazon Web Services perfectly support SNS as a trigger for AWS Lambda functions, but with SQS you have to find a custom solution. This tutorial will show an experimental setup using [Serverless](https://serverless.com) to read messages from an SQS queue and build auto-scaling worker processes.
@@ -44,7 +44,7 @@ Amazon offers a service called **CloudWatch Alarms** which can post messages to 
 
 To update the number of desired worker processes, you should configure multiple alerts to send a message to SNS as soon as more than 100, 1000, or 2000 messages are queued.
 
-![Scaling with CloudWatch Alerts and DynamoDB](/assets/images/posts/2017-03-31-serverless-sqs-worker-with-aws-lambda/scale.png)
+![Scaling with CloudWatch Alerts and DynamoDB](/assets/images/posts/2017-04-01-serverless-sqs-worker-with-aws-lambda/scale.png)
 
 For every SNS message, Amazon invokes the `scale` function, which knows how to update the scaling configuration in DynamoDB based on the alarm configuration. When the alarm for `more than 2000` messages fires, the `scale` functions adds `10` to the current configured number of child processes. As soon as the alarm is resolved and the `scale` function is invoked a second time, the number of child processes is decreased again.
 
@@ -52,7 +52,7 @@ For every SNS message, Amazon invokes the `scale` function, which knows how to u
 
 The entry point for the worker is an AWS Lambda function, which reads the current scaling configuration from **DynamoDB** and invokes the desired number of `process` functions to read the messages from SQS. This Lambda function is invoked by **CloudWatch Schedule** every minute.
 
-![SQS Worker to invoke Lambda functions](/assets/images/posts/2017-03-31-serverless-sqs-worker-with-aws-lambda/worker.png)
+![SQS Worker to invoke Lambda functions](/assets/images/posts/2017-04-01-serverless-sqs-worker-with-aws-lambda/worker.png)
 
 Normally the worker function needs only a few seconds of runtime, as it does not wait for an answer of the invoked functions. The `process` functions take care of polling messages from SQS and will continue to poll for new messages until the timeout is about to be exceeded or the queue is empty.
 
