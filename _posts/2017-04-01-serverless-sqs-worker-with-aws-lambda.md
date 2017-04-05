@@ -26,7 +26,7 @@ This setup using just a single `worker` function is fine unless your SQS queue c
 
 You can use DynamoDB to store information about how many worker processes should be invoked. The minimum for the configuration is – of course – one, but there is no limit to the maximum number. 
 
-*Amazon limits Lambda invocations to 100 per second. If you expect a huge amount of messages and plan to process them in a short amount of time, make sure to contact Amazon first!*
+*Amazon limits Lambda functions to 200 concurrent invocations per second. If you expect a huge amount of messages and plan to process them in a short amount of time, make sure to contact Amazon first!*
 
 **tl;dr:** You can find the [sqs-worker-serverless](https://github.com/sbstjn/sqs-worker-serverless) project on GitHub. It includes a [serverless](https://serverless.com) configuration to setup a system with the following flow:
 
