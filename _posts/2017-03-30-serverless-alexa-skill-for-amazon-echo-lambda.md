@@ -12,13 +12,13 @@ description: Learn how to deploy a custom Alexa skill for your Amazon Echo using
 
 If you read my first article about [Amazon Alexa and AWS Lambda](https://sbstjn.com/custom-alexa-skill-for-amazon-echo-with-lambda.html), you already know how to deploy a custom Alexa skill using [Apex](http://apex.run). With this article, you will learn how to use the [Serverless](https://serverless.com) framework to deploy a function to AWS Lambda and invoke it with your Amazon Echo using voice commands.
 
-# Echo? Alexa? Why?
+## Echo? Alexa? Why?
 
 Alexa is Amazon's awesome attempt to introduce a personal voice-controlled assistant to our living rooms, most comparable with Apple's Siri or the services from Google. Voice controlled devices are all about the interface, and therefore I clearly prefer to call a service by a name like *Alexa* instead of saying *OK Google* all day.
 
 The supported features in Alexa are called **Skills** and must be activated using [Amazon's companion app](https://itunes.apple.com/us/app/amazon-alexa/id944011620?mt=8) for Alexa and the Echo. Under the hood, they are just a list of configured voice commands with placeholders for variables and HTTPS request or direct invocations of [AWS Lambda](https://aws.amazon.com/lambda/) functions.
 
-# Let's get started
+## Let's get started
 
 Amazon supports two backend types for an Alexa Skill: AWS Lambda or a custom endpoint using HTTPS. As nobody likes to maintain infrastructure, let's go with using AWS Lambda. Of course, you do not want to use the AWS console to configure your setup manually; you should use tooling to setup all resources. 
 
@@ -114,7 +114,7 @@ $ > sls invoke -f answer
 
 Basically, that's all you need as the foundation to handle requests from a custom Alexa Skill.
 
-# Alexa's response
+## Alexa's response
 
 Amazon requires your Lambda function to return JSON data to process the information for Alexa. The minimal structure for a response comes down to – of course – the sentence Alexa will say and some information about the answer to display and rate in the Alexa *companion application* on your mobile phone.
 
@@ -143,7 +143,7 @@ module.exports.answer = (event, context, callback) => {
 
 You will see how the final function looks like after the next steps, or you can take a sneak peek at the [GitHub repository](https://github.com/sbstjn/serverless-alexa-skill) of course …
 
-# Amazon Developer Console
+## Amazon Developer Console
 
 To test and use the Alexa Skill, you need to sign up for a free [Amazon Developer Account](https://developer.amazon.com/). After you are logged in to your account, you can access the `Alexa` section and get started with using the `Alexa Skills kit` to create your Skill.
 
@@ -153,7 +153,7 @@ Right now all custom Alexa skills need be invoked by a command – for example, 
 
 Using this configuration, your Echo will respond to voice commands like `Alexa, open Example App` and `Alexa, ask Example App` .
 
-# Interaction Model
+## Interaction Model
 
 All Alexa skills have a so-called **Interaction Model** which lists all supported commands and the type definition of their arguments. To get started with a simple skill just configure an `intent` and copy and paste the default intents for a typical skill.
 
@@ -186,7 +186,7 @@ The following configuration registers a function identifier `answer` with one ar
 
 Amazon supports a lot of types for a `slot` in commands. For this first example application, it's fine to use `AMAZON.NUMBER`, but [there are much more available](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/built-in-intent-ref/slot-type-reference).
 
-# Sample Utterances
+## Sample Utterances
 
 The list of sample utterances defines all requests your Skill will respond to. Every line starts with the intent identifier – in this case, it's `answer` – and is followed by the sentence you plan to say to Alexa.
 
@@ -197,7 +197,7 @@ answer  what's {item}
 
 Together with the initial configuration of your **Skill**, Alexa will recognize a command whenever you say something matching the pattern `Alexa, ask Example App what is {XYZ}` .
 
-# Configure AWS Lambda endpoint
+## Configure AWS Lambda endpoint
 
 On the next screen of Amazon's configuration wizard, you are prompted for the AWS Lambda ARN of your deployed function that will respond to requests by Alexa.
 
@@ -230,7 +230,7 @@ Now just enter the ARN in your application configuration and continue to use the
 
 ![Alexa Lambda Configuration](/assets/images/posts/2017-01-06-custom-alexa-skill-for-amazon-echo-lambda/skill_lambda.png)
 
-# Alexa Simulator
+## Alexa Simulator
 
 Luckily Amazon has something called `Service Simulator` for Alexa, so you don't have to wake up everybody in your house if you plan to debug and enhance your Alex Skill in the middle of the night.
 
@@ -240,7 +240,7 @@ If you set up everything correct, you should be able to enter an Utterance like 
 
 Whenever you encounter some strange behavior use `sls logs -f answer` to see all logs of your AWS Lambda function.
 
-# Update and deploy Lambda function
+## Update and deploy Lambda function
 
 Of course, there is nothing great about having a custom Alex Skill which will always respond with the same answer to your question. 
 
@@ -307,7 +307,7 @@ After you deployed the code above Alexa can respond with different answers to th
 
 Did you noticed that no additional update in Amazon's Developer Console was needed for the update? As soon as your function is configured, or even released, you can update the AWS Lambda function anytime and enhance your API without going through configuration or the review process over and over again.
 
-# Testing Alexa Skill
+## Testing Alexa Skill
 
 Besides the **Alexa Service Simulator**, you can enable testing with your device and start talking to Alexa while deploying a new version of your Lambda function.
 
