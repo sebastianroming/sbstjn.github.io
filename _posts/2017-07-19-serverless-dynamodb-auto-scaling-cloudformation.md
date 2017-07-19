@@ -38,4 +38,4 @@ custom:
         # usage: 0.75 is the default
 ```
 
-After your next deployment, Amazon will configure native Auto Scaling for your DynamoDB table. Before the native support from Amazon you had to handle Auto Scaling on your own, with a custom AWS Lambda function for example. But those times a finally over!
+After your next deployment, Amazon will configure native Auto Scaling for your DynamoDB table. Before the native support from Amazon, you had to handle Auto Scaling on your own, with a custom AWS Lambda function for example. But those times a finally over!
