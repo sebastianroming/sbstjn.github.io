@@ -26,16 +26,11 @@ custom:
       read:
         minimum: 5        # Minimum read capacity
         maximum: 1000     # Maximum read capacity
-        usage: 0.75       # Targeted usage percentage
+        usage: 0.75       # Usage percentage
       write:
-        minimum: 40       # Minimum write capacity
-        maximum: 200      # Maximum write capacity
-        usage: 0.5        # Targeted usage percentage
-    - name: another-table
-      read:
-        minimum: 5
-        maximum: 1000
-        # usage: 0.75 is the default
+        minimum: 40
+        maximum: 200
+        usage: 0.5
 ```
 
 After your next deployment, Amazon will configure native Auto Scaling for your DynamoDB table. Before the native support from Amazon, you had to handle Auto Scaling on your own, with a custom AWS Lambda function for example. But those times a finally over!
