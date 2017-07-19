@@ -14,7 +14,7 @@ github: 'https://github.com/sbstjn/serverless-dynamodb-autoscaling'
 
 Since a few days, Amazon provides a native way to enable Auto Scaling for DynamoDB tables! Luckily the settings can be configured using CloudFormation templates, and so I wrote a [plugin for serverless](https://github.com/sbstjn/serverless-dynamodb-autoscaling) to easily configure Auto Scaling without having to write the whole CloudFormation configuration.
 
-You can find the [serverless-dynamodb-autoscaling on GitHub](https://github.com/sbstjn/serverless-dynamodb-autoscaling) and [NPM]([serverless-dynamodb-autoscaling](https://www.npmjs.com/package/serverless-dynamodb-autoscaling) as well. Just install it using `npm` or `yarn` and add it to our `serverless.yml` configuration:
+You can find the [serverless-dynamodb-autoscaling on GitHub](https://github.com/sbstjn/serverless-dynamodb-autoscaling) and [NPM](https://www.npmjs.com/package/serverless-dynamodb-autoscaling) as well. Just install it using `npm` or `yarn` and add it to our `serverless.yml` configuration:
 
 ```
 plugins:
