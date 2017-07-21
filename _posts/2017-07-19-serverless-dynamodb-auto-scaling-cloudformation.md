@@ -22,7 +22,7 @@ plugins:
 
 custom:
   capacities:
-    - name: custom-table  # DynamoDB table name
+    - table: CustomTable  # DynamoDB resource name
       read:
         minimum: 5        # Minimum read capacity
         maximum: 1000     # Maximum read capacity
