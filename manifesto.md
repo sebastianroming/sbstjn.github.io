@@ -4,6 +4,7 @@ title: Manifesto
 permalink: /manifesto
 image: /assets/images/sbstjn/04.jpg
 noindex: true
+sitemap: false
 redirect_from:
   - /manifest
 
