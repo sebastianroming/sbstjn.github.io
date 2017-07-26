@@ -1,5 +1,5 @@
 title: sbstjn.com
-email: hi@sbstjn.com
+email: inbox@sbstjn.com
 description: Software Engineer and Team Lead living in Hamburg, Germany. Daytime Engineering Team Lead at Jimdo and passionate about software, design, people, and vegan food.
 image: /assets/images/sbstjn/04.jpg
 baseurl: ""
@@ -9,7 +9,7 @@ repository: sbstjn/sbstjn.github.io
 owner:
   name: Sebastian Müller
 
-author: sbsjtn
+author: sbstjn
 
 twitter:
   username: sbstjn
