@@ -49,7 +49,7 @@ Website:    http://sls-analytics-website-example.s3-website-us-east-1.amazonaws.
 
 Just visit the [website's URL](http://sls-analytics-website-example.s3-website-us-east-1.amazonaws.com/), hit a few times the refresh button in your web browser and have a [look at the dashboard](http://sls-analytics-website-dashboard.s3-website-us-east-1.amazonaws.com/)!
 
-![Serverless Analytics examples](/assets/images/posts/2017-08-23-serverless-analytics/browser.png)
+![Serverless Analytics examples](/assets/images/posts/2017-08-23-serverless-analytics/browser.jpg)
 
 ## Tracking
 
