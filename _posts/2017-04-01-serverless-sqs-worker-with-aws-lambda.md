@@ -12,6 +12,8 @@ image: /assets/images/posts/2017-04-01-serverless-sqs-worker-with-aws-lambda/spl
 
 Have you ever wondered how to process messages from SQS without maintaining infrastructure? Amazon Web Services perfectly support SNS as a trigger for AWS Lambda functions, but with SQS you have to find a custom solution. This tutorial will show an experimental setup using [Serverless](https://serverless.com) to read messages from an SQS queue and build auto-scaling worker processes.
 
+**Update:** *You should have a look at [Serverless Analytics](https://sbstjn.com/serverless-analytics-with-kinesis-stream-lambda.html) and use Kinesis instead of SQS to achieve the same goal with an even better implementation and less maintenance!*
+
 ## AWS Lambda
 
 It's no secret AWS Lambda is a great service. Deployed functions can be triggered by a broad variety of sources: *HTTP requests*, *SNS topics*, and *Alexa voice commands are* just a few to name. But if you want to use SQS as the source, you have to build something custom that processes new messages and scales based on the length of the queue.
