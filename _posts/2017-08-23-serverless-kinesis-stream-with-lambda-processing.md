@@ -43,11 +43,11 @@ $ > yarn deploy
 
 […]
 
-Dashboard:  http://sls-analytics-website-dashboard.s3-website-us-east-1.amazonaws.com/
-Website:    http://sls-analytics-website-example.s3-website-us-east-1.amazonaws.com/
+Dashboard:  http://sls-analytics-dashboard.s3-website-us-east-1.amazonaws.com/
+Website:    http://sls-analytics-website.s3-website-us-east-1.amazonaws.com/
 ```
 
-Just visit the [website's URL](http://sls-analytics-website-example.s3-website-us-east-1.amazonaws.com/), hit a few times the refresh button in your web browser and have a [look at the dashboard](http://sls-analytics-website-dashboard.s3-website-us-east-1.amazonaws.com/)!
+Just visit the [website's URL](http://sls-analytics-website.s3-website-us-east-1.amazonaws.com/), hit a few times the refresh button in your web browser and have a [look at the dashboard](http://sls-analytics-dashboard.s3-website-us-east-1.amazonaws.com/)!
 
 ![Serverless Analytics examples](/assets/images/posts/2017-08-23-serverless-analytics/browser.jpg)
 
@@ -59,7 +59,7 @@ The [Serverless Analytics](https://github.com/sbstjn/serverless-analytics) proje
 
 ```js
 fetch(
-  'https://n6q0egpreh.execute-api.us-east-1.amazonaws.com/v1/track',
+  'https://lqwyep8qee.execute-api.us-east-1.amazonaws.com/v1/track',
   {
     method: "POST",
     body: JSON.stringify( { url: location.href, name: document.title } ),
