@@ -21,6 +21,7 @@
         method: "POST",
         body: JSON.stringify(
           {
+            agent: navigator.userAgent,
             date: new Date().getTime(),
             name: document.title,
             url: location.href,
