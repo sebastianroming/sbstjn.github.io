@@ -13,4 +13,26 @@
   })();
 </script>
 
-<script src="https://js.heft.io/script.js" id="heft" data-heft="sbstjn.com"></script>
+<script>
+  if (fetch) {
+    fetch(
+      'https://6rbd13hyh7.execute-api.us-east-1.amazonaws.com/dev/track',
+      {
+        method: "POST",
+        body: JSON.stringify(
+          {
+            date: new Date().getTime(),
+            name: document.title,
+            url: location.href,
+            website: '<%=WebsiteID%>'
+          }
+        ),
+        headers: new Headers(
+          {
+            "Content-Type": "application/json"
+          }
+        )
+      }
+    )
+  }
+</script>
