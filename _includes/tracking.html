@@ -13,28 +13,4 @@
   })();
 </script>
 
-<script>
-  if (fetch) {
-    fetch(
-      'https://6rbd13hyh7.execute-api.us-east-1.amazonaws.com/dev/track',
-      {
-        method: "POST",
-        body: JSON.stringify(
-          {
-            agent: navigator.userAgent,
-            date: new Date().getTime(),
-            name: document.title,
-            url: location.href,
-            referrer: document.referrer,
-            website: '1d0407dd-9750-4b8e-a3e6-1f853487aa2d'
-          }
-        ),
-        headers: new Headers(
-          {
-            "Content-Type": "application/json"
-          }
-        )
-      }
-    )
-  }
-</script>
+<script src="https://js.heft.io" data-site="1d0407dd-9750-4b8e-a3e6-1f853487aa2d"></script>
