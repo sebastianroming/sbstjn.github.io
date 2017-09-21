@@ -5,7 +5,7 @@ permalink: /
 image: /assets/images/sbstjn/04.jpg
 ---
 
-Team Lead and Software Engineer living and working in Hamburg, Germany. Daytime [Engineering Team Lead at **Jimdo**](https://www.linkedin.com/in/sbstjn) and passionate about software, design, people and vegan food.
+Team Lead and Software Engineer living and working in Hamburg, Germany. Daytime [Engineering Team Lead at **Jimdo**](https://www.linkedin.com/in/sbstjn) and passionate about software, design, people, and vegan food.
 
 After 17 years of creating websites, I still enjoy most parts of developing and designing applications for the web. You can find all public projects on [GitHub](https://github.com/sbstjn), for example, [Timesheet.js](https://github.com/sbstjn/timesheet.js) with more than six thousand Stargazers. The most interesting recent projects are [hanu](https://github.com/sbstjn/hanu) for writing Slack bots or the [CLI Notes](https://clinot.es) example project to manage text notes from the command line. Lately, I published a few [plugins for serverless](https://github.com/sbstjn?utf8=%E2%9C%93&tab=repositories&q=serverless&type=&language=), you will find them on [GitHub](https://github.com/sbstjn?utf8=%E2%9C%93&tab=repositories&q=serverless&type=&language=).
 
