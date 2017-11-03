@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Use AWS Lambda with MaxMind GeoLite2 IP location database
+title: AWS Lambda with MaxMind GeoLite2 IP database
 published: true
 date: 2017-11-03
 permalink: /aws-lambda-geoip-location-maxmind.html
 description: >-
-  Use AWS Lambda and the MaxMind GeoLite2 City IP database to lookup locations for IP addresses.
+  Deploy your own service to lookup the geo location of IP addresses using AWS Lambda and the MaxMind GeoLite2 City IP database.
 image: >-
   /assets/images/posts/serverless_geoip.jpg
 github: 'https://github.com/sbstjn/serverless-geoip'
