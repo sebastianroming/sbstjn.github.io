@@ -71,6 +71,8 @@ a, img {
   max-width: $content-maxwidth;
   margin: 0 auto;
   @extend %clearfix;
+
+  padding: constant(safe-area-inset-top) constant(safe-area-inset-right) 0 constant(safe-area-inset-left);
 }
 
 .wrapper-responive {

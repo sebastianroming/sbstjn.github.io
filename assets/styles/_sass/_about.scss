@@ -15,6 +15,10 @@ html body {
   margin: 0;
   box-sizing: border-box;
 
+  padding-right: calc(20px + constant(safe-area-inset-right));
+  padding-left: calc(20px + constant(safe-area-inset-left));
+
+
   &.fix {
 		background-color: rgba(0, 0, 0, 0.9);
 		position: fixed;
@@ -108,13 +112,17 @@ html body {
     }
 
     a[data-move="1"] {
+      display: none;
       float: right;
-      margin-right: 22px;
-      right: 0;
+
+      right: 22px;
+      right: constant(safe-area-inset-right);
     }
 
     a[data-move="-1"] {
-      margin-left: 22px;
+      display: none;
+      left: 22px;
+      left: constant(safe-area-inset-left);
     }
 
     @media (max-width: 460px) {

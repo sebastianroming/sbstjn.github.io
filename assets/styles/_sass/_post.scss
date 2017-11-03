@@ -32,14 +32,14 @@
     position: relative;
 
     &:not(.unfixable) {
-  		background-color: rgba(0, 0, 0, 0.9);
-  		position: fixed;
-  	}
+      background-color: rgba(0, 0, 0, 0.9);
+      position: fixed;
+    }
   }
 }
 
 .post-content {
-	padding: 112px 20px 12px 20px;
+	padding: 112px 20px 12px 20px;	
 
 	h2 {
 		margin-top: 32px;
