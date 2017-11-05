@@ -1,14 +1,17 @@
 ---
 layout: post
-title: Use TypeScript and CircleCI v2 Workflows for NPM packages
+title: Boilerplate with TypeScript and CircleCI v2 Workflows for NPM packages
 published: true
 date: 2017-11-05
-permalink: /deploy-typescript-npm-with-circleci-workflows.html
+permalink: /boilerplate-for-typescript-npm-package-with-circleci-v2-workflows.html
 description: >-
   Use TypeScript, CircleCI v2 Workflows, and GitHub Release to publish JavaScript packages on NPM. Test, Lint, and Build in parallel with CircleCI jobs and workflows.
 image: >-
   /assets/images/posts/2017-11-05-npm-typescript-circleci-workflows/splash.png
 github: https://github.com/sbstjn/typescript-npm-boilerplate
+redirect_from:
+  - /deploy-typescript-npm-with-circleci-workflows.html
+
 ---
 
 If you love software workflows as much as I do, you should check out my basics for deploying NPM packages using TypeScript, CircleCI v2, and GitHub Releases.
