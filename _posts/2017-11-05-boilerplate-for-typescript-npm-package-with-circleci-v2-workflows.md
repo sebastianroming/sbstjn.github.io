@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Boilerplate with TypeScript and CircleCI v2 Workflows for NPM packages
+title: Use TypeScript and CircleCI v2 Workflows for NPM packages
 published: true
 date: 2017-11-05
 permalink: /boilerplate-for-typescript-npm-package-with-circleci-v2-workflows.html
